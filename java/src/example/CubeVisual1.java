@@ -6,7 +6,7 @@ public class CubeVisual1 extends Visual
 {
     public void settings()
     {
-        size(800, 600, P3D);
+        size(1000, 500, P3D);
         //fullScreen(P3D, SPAN);
     }
 
@@ -14,7 +14,7 @@ public class CubeVisual1 extends Visual
     {
         startMinim();
         //startListening();
-        loadAudio("heroplanet.mp3");
+        loadAudio("King.mp3");
         colorMode(HSB);
     }
 

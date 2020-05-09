@@ -9,8 +9,8 @@ public class Loadscreen {
     }
     
     public void render(){
-
         in.loadPixels();
+        
         for (int i = 0; i< in.width; i++){
 
             for(int j = 0; j < in.height; j++){
