@@ -2,9 +2,9 @@ package c18743045;
 
 
 public class Loadscreen {
-    Instrument  in;
+    Instruments  in;
 
-    public Loadscreen( Instrument in){
+    public Loadscreen( Instruments in){
         this.in = in;
     }
     

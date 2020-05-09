@@ -1,7 +1,7 @@
 package c18743045;
 import ie.tudublin.*;
 
-public class Instrument extends Visual{
+public class Instruments extends Visual{
 
     Loadscreen ls;
 
