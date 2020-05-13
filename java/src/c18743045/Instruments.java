@@ -23,7 +23,7 @@ public class Instruments extends Visual{
 
     }
 
-    int counter = 0;
+    int state = 0;
 
     public void keyPressed()
     {
@@ -37,15 +37,18 @@ public class Instruments extends Visual{
 
     }
     
-  
-
-
+    public void mouseClicked() {
+        state = 1;
+      }
 
     public void draw()
     {   
         calculateAverageAmplitude();
-        //ls.render();
-        strands.render();
-             
+        ls.render();
+
+        if (state == 1){
+            strands.render();
+        }
+        
     }
 }
