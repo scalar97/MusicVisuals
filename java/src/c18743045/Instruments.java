@@ -5,6 +5,8 @@ public class Instruments extends Visual{
 
     Loadscreen ls;
 
+    PianoStrands strands;
+
     public void settings(){
         size(1600,900,P3D);
     }
@@ -12,17 +14,21 @@ public class Instruments extends Visual{
 
     public void setup(){
         startMinim();
-        //loadAudio("king.mp3";)
+        loadAudio("King.mp3");
         colorMode(HSB);
 
         ls = new Loadscreen(this);
+
+        strands = new PianoStrands(this);
+
 
     }
 
     public void draw()
     {   
-        //calculateAverageAmplitude();
-        ls.render();
+        calculateAverageAmplitude();
+        //ls.render();
+        strands.render();
              
     }
 }
