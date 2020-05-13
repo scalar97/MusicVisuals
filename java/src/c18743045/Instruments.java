@@ -21,8 +21,17 @@ public class Instruments extends Visual{
 
         strands = new PianoStrands(this);
 
-
     }
+
+    public void keyPressed()
+    {
+        if (key == ' ')
+        {
+            getAudioPlayer().cue(0);
+            getAudioPlayer().play();
+        }
+    }
+
 
     public void draw()
     {   
