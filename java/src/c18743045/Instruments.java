@@ -23,14 +23,24 @@ public class Instruments extends Visual{
 
     }
 
+    int counter = 0;
+    
     public void keyPressed()
     {
-        if (key == ' ')
-        {
-            getAudioPlayer().cue(0);
+        if (key == ' ' && counter == 0){
             getAudioPlayer().play();
+            counter = 1;
         }
+
+        if (key == ' ' && counter == 1){
+            getAudioPlayer().pause();
+            counter = 0;
+        }
+
     }
+    
+  
+
 
 
     public void draw()
