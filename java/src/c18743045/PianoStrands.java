@@ -14,7 +14,7 @@ public class PianoStrands {
     public void render() {
         float strings = (60 * in.getAmplitude());
 
-        in.background(PApplet.map(in.getSmoothedAmplitude(), 0, 1, 0, 360), 255, 255);
+        in.background(PApplet.map(in.getSmoothedAmplitude(), 0, 1, 0, 292), 255, 242);
 
         //strand affects the number of strands drawn as it depends on the amplitude of the sound wave the song outputs 
         //also sets the current strand we are working on for next loop until it finishes the strand
