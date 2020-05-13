@@ -3,19 +3,22 @@ import processing.core.PApplet;
 
 public class PianoStrands {
     Instruments  in;
-    int strings = 0;
+    
+    
 
     public PianoStrands( Instruments in){
         this.in = in;
     }
 
+
     public void render() {
-        
+        float strings = (60 * in.getAmplitude());
+
         in.background(PApplet.map(in.getSmoothedAmplitude(), 0, 1, 0, 360), 255, 255);
 
         //strand affects the number of strands drawn as it depends on the amplitude of the sound wave the song outputs 
         //also sets the current strand we are working on for next loop until it finishes the strand
-        for (int strand = 0; strand < strings + (60 * in.getAmplitude()); strand++) {
+        for (int strand = 0; strand < strings ; strand++) {
               
             //starts custom shape ie the strand  
             in.beginShape();

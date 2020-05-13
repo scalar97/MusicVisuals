@@ -4,14 +4,12 @@ import ie.tudublin.*;
 public class Instruments extends Visual{
 
     Loadscreen ls;
-
     PianoStrands strands;
 
     public void settings(){
         size(1600,900,P3D);
     }
     
-
     public void setup(){
         startMinim();
         loadAudio("King.mp3");
@@ -49,6 +47,6 @@ public class Instruments extends Visual{
         if (state == 1){
             strands.render();
         }
-        
+
     }
 }
