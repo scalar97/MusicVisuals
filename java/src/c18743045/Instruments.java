@@ -5,6 +5,7 @@ public class Instruments extends Visual{
 
     Loadscreen ls;
     PianoStrands strands;
+    Revolutions re;
 
     public void settings(){
         size(1600,900,P3D);
@@ -16,12 +17,14 @@ public class Instruments extends Visual{
         colorMode(HSB);
 
         ls = new Loadscreen(this);
-
+        
         strands = new PianoStrands(this);
+        re = new Revolutions(this);
 
     }
 
     int state = 0;
+	public float noiseMax;
 
     public void keyPressed()
     {
@@ -31,6 +34,10 @@ public class Instruments extends Visual{
 
         if (key == 'x'){
             getAudioPlayer().pause();
+        }
+
+        if (key == 'r'){
+            state = 2;
         }
 
     }
@@ -46,6 +53,10 @@ public class Instruments extends Visual{
 
         if (state == 1){
             strands.render();
+        }
+
+        if (state == 2){
+            re.render();
         }
 
     }

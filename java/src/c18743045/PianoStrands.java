@@ -3,13 +3,10 @@ import processing.core.PApplet;
 
 public class PianoStrands {
     Instruments  in;
-    
-    
 
     public PianoStrands( Instruments in){
         this.in = in;
     }
-
 
     public void render() {
         float strings = (60 * in.getAmplitude());
