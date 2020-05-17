@@ -71,8 +71,7 @@ public class Instruments extends Visual{
         // }
     }
 
-  
-    
+
     public void mouseClicked() {
         //state = (int) random(1, 5);
       }

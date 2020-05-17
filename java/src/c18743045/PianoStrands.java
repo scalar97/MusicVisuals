@@ -41,7 +41,7 @@ public class PianoStrands {
                 //is being mapped to the screens values for drawing the vertex
                 float y = PApplet.map(in.noise(xoff, yoff, zoff), 0, 1, 0, in.height);
                 //for vertex 
-                in.stroke(PApplet.map(in.getSmoothedAmplitude(), 0, 1, 22, 242), 255, 255);
+                in.stroke(PApplet.map(in.getSmoothedAmplitude(), 0, 1, 22, 242), 200, 255);
                 in.strokeWeight(4);
             
                 in.vertex(x, y);
