@@ -58,7 +58,7 @@ public class Instruments extends Visual{
             state = 7;
         }
 
-        if (key == 'm'){
+        if (key == 'i'){
             state = 5;
         }
 
