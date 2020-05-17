@@ -13,6 +13,8 @@ Student Number:
 
 # Description of the assignment
 
+- Mouse click to exit Loading Screen 
+
 # Instructions
 
 # How it works
