@@ -29,7 +29,7 @@ public class Revolutions {
             //mapping noise values to window size values
             float n = PApplet.map(in.noise(xoff,yoff),0,1,0,700);
 
-            //x,y values for vertices for revolution added shift so each start would be different
+            //x,y values for vertices for revolution
             float x = n * PApplet.cos(Theta);
             float y = n * PApplet.sin(Theta);
 
@@ -42,6 +42,7 @@ public class Revolutions {
             else{
                 in.noFill();
             }
+            
            //drawing vertices 
             in.vertex(x,y);
 
