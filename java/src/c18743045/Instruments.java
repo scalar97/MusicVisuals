@@ -4,9 +4,11 @@ import ie.tudublin.*;
 public class Instruments extends Visual{
 
     Loadscreen ls;
+    Propeller pr;
+    
     PianoStrands strands;
     Revolutions re;
-
+    
     public void settings(){
         size(1600,900,P3D);
     }
@@ -17,7 +19,8 @@ public class Instruments extends Visual{
         colorMode(HSB);
 
         ls = new Loadscreen(this);
-        
+        pr = new Propeller(this);
+
         strands = new PianoStrands(this);
         re = new Revolutions(this);
 
@@ -40,6 +43,10 @@ public class Instruments extends Visual{
             state = 2;
         }
 
+        if (key == 'p'){
+            state = 4;
+        }
+
     }
     
     public void mouseClicked() {
@@ -49,7 +56,10 @@ public class Instruments extends Visual{
     public void draw()
     {   
         calculateAverageAmplitude();
-        ls.render();
+        
+        if(state == 0){
+            ls.render();
+        }
 
         if (state == 1){
             strands.render();
@@ -57,6 +67,10 @@ public class Instruments extends Visual{
 
         if (state == 2){
             re.render();
+        }
+
+        if(state == 4){
+            pr.render();
         }
 
     }
