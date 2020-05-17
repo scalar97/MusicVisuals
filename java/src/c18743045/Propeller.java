@@ -22,7 +22,7 @@ public class Propeller {
 
         float n = (PApplet.map(in.getSmoothedAmplitude(),0,0.72f,0.01f,9f));
 
-        for (float theta = 0; theta < PApplet.TWO_PI ; theta += (4f-n)) {
+        for (float theta = 0; theta < PApplet.TWO_PI ; theta += (4.5f-n)) {
 
             float x = 450 * PApplet.cos(theta+shift);
             float y = 450 * PApplet.sin(theta+shift);

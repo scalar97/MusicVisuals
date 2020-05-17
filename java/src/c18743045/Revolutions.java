@@ -30,8 +30,8 @@ public class Revolutions {
             float n = PApplet.map(in.noise(xoff,yoff),0,1,0,700);
 
             //x,y values for vertices for revolution 
-            float x = n * PApplet.cos(Theta);
-            float y = n * PApplet.sin(Theta);
+            float x = n * PApplet.cos(Theta+PApplet.HALF_PI);
+            float y = n * PApplet.sin(Theta+shift);
 
             in.stroke(PApplet.map(in.getSmoothedAmplitude(), 0, 1, 22, 242), 255, 255);
             in.strokeWeight(4);
