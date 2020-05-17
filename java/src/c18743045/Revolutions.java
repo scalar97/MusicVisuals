@@ -22,14 +22,14 @@ public class Revolutions {
         //loop until TW0_PI to create a full revolution around centre 
         for (float Theta = 0; Theta < PApplet.TWO_PI; Theta += 0.1f) {
 
-            //creating two vaules that naviaget the noise space to help draw vertices
+            //creating two vaules that navigate the noise space to help draw vertices
             float xoff = PApplet.map(PApplet.cos(Theta+shift),-1,1,0,in.noiseMax);
             float yoff = PApplet.map(PApplet.sin(Theta+PApplet.QUARTER_PI),-1,1,0,in.noiseMax);
 
             //mapping noise values to window size values
             float n = PApplet.map(in.noise(xoff,yoff),0,1,0,700);
 
-            //x,y values for vertices for revolution 
+            //x,y values for vertices for revolution added shift so each start would be different
             float x = n * PApplet.cos(Theta+PApplet.HALF_PI);
             float y = n * PApplet.sin(Theta+shift);
 
@@ -47,8 +47,8 @@ public class Revolutions {
 
         }
         in.endShape(PApplet.CLOSE);
-
         //used to start at different points in the noise space used HALF_PI for fun 
+        //also to shift the start of a revolution 
         shift += PApplet.map(in.noise(0.1f,PApplet.QUARTER_PI),0,1,1f,PApplet.HALF_PI);
     }    
 }
