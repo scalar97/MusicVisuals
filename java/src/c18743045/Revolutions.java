@@ -30,8 +30,8 @@ public class Revolutions {
             float n = PApplet.map(in.noise(xoff,yoff),0,1,0,700);
 
             //x,y values for vertices for revolution added shift so each start would be different
-            float x = n * PApplet.cos(Theta+PApplet.HALF_PI);
-            float y = n * PApplet.sin(Theta+shift);
+            float x = n * PApplet.cos(Theta);
+            float y = n * PApplet.sin(Theta);
 
             in.stroke(PApplet.map(in.getSmoothedAmplitude(), 0, 1, 22, 242), 255, 255);
             in.strokeWeight(4);
@@ -47,8 +47,7 @@ public class Revolutions {
 
         }
         in.endShape(PApplet.CLOSE);
-        //used to start at different points in the noise space used HALF_PI for fun 
-        //also to shift the start of a revolution 
+        //used to start at different points in the noise space used HALF_PI for fun  
         shift += PApplet.map(in.noise(0.1f,PApplet.QUARTER_PI),0,1,1f,PApplet.HALF_PI);
     }    
 }
