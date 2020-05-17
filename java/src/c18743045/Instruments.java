@@ -18,6 +18,7 @@ public class Instruments extends Visual{
     public void setup(){
         startMinim();
         loadAudio("King.mp3");
+
         colorMode(HSB);
         ls = new Loadscreen(this);
 
@@ -37,7 +38,7 @@ public class Instruments extends Visual{
     public void keyPressed()
     {
         if (key == ' '){
-            getAudioPlayer().play();
+            getAudioPlayer().play();    
             state = 1;
         }
           
@@ -61,7 +62,16 @@ public class Instruments extends Visual{
         if (key == 'i'){
             state = 5;
         }
+
+        //needs if s is pressed it switches but if space is pressed it breaks 
+        //maybe we'll get to work in future 
+        // if (key == 's'){
+        //     getAudioPlayer().pause();
+        //     startListening();
+        // }
     }
+
+  
     
     public void mouseClicked() {
         //state = (int) random(1, 5);
