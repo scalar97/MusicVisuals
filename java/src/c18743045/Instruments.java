@@ -61,8 +61,6 @@ public class Instruments extends Visual{
         if (key == 'i'){
             state = 5;
         }
-
-
     }
     
     public void mouseClicked() {

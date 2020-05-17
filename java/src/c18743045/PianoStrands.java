@@ -9,6 +9,8 @@ public class PianoStrands {
     }
 
     public void render() {
+        //to represent a piano in mozarts time as a at the time piano had 60 keys
+        //multiplying by amplitude to simulate not all keys are used at once
         float strings = (60 * in.getAmplitude());
 
         in.background(PApplet.map(in.getSmoothedAmplitude(), 0, 1, 0, 292), 255, 242);
