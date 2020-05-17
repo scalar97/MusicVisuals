@@ -4,6 +4,8 @@ import ie.tudublin.*;
 public class Instruments extends Visual{
 
     Loadscreen ls;
+    Message me;
+    
     Propeller pr;
     
     PianoStrands strands;
@@ -17,48 +19,64 @@ public class Instruments extends Visual{
         startMinim();
         loadAudio("King.mp3");
         colorMode(HSB);
-
         ls = new Loadscreen(this);
-        pr = new Propeller(this);
 
+        me = new Message(this);
+        pr = new Propeller(this);
+        
         strands = new PianoStrands(this);
         re = new Revolutions(this);
 
     }
-
-    int state = 0;
+    //for re
 	public float noiseMax;
 
+    int state = 0;
+
+    //for switching between instruments 
     public void keyPressed()
     {
         if (key == ' '){
             getAudioPlayer().play();
+            state = 1;
+        }
+          
+        if (key == '3'){
+            state = 1;
+        }
+
+        if (key == '1'){
+            state = 2;
+        }
+
+        if (key == '2'){
+            state = 4;
         }
 
         if (key == 'x'){
             getAudioPlayer().pause();
+            state = 7;
         }
 
-        if (key == 'r'){
-            state = 2;
+        if (key == 'm'){
+            state = 5;
         }
 
-        if (key == 'p'){
-            state = 4;
-        }
 
     }
     
     public void mouseClicked() {
-        state = 1;
+        //state = (int) random(1, 5);
       }
 
     public void draw()
     {   
         calculateAverageAmplitude();
         
+        //callling all instruments as required 
         if(state == 0){
-            ls.render();
+            //ls.render();
+            me.render();
         }
 
         if (state == 1){
@@ -71,6 +89,14 @@ public class Instruments extends Visual{
 
         if(state == 4){
             pr.render();
+        }
+
+        if(state == 5){
+            me.render();
+        }
+
+        if(state == 7){
+            ls.render();
         }
 
     }
