@@ -12,11 +12,11 @@ public class Message {
     public void render(){
 
         in.frameRate(60);
-        in.background(PApplet.map(in.getSmoothedAmplitude(), 0, 1, 0, 360), 255, 255);
-        in.fill(in.random(255), in.random(255), in.random(255));
-        in.textSize(54);
+        in.background(0);
+        in.fill(PApplet.map(in.getSmoothedAmplitude(), 0, 1, 0, 360), 255, 255);
+        in.textSize(45);
         in.textAlign(PApplet.CENTER, PApplet.CENTER);
-        in.text("\nMORTAL THOU SHALT READ ALL INSTRUCTUCTIONS\nTO ENTER MY INSTRUMENTS ??\\_('_')_/??\n\nPRESS M AT ANY MOMENT TO LOAD THIS MESSAGE AGAIN!\n\nPress SPACE to BEGIN!\nPress 1 to start Reveolutions!\nPress 2 to start Propellers!\n Press 3 to go inside my Piano again!\nPress X TO HALT! STAY CLAM & FULLSCREEN AHEAD!", in.width / 2, in.height / 2);
+        in.text("This a visualization of King Of Everything by DOMINIC FIKE\n\nPLEASE READ ALL THE FOLLOWING INSTRUCTUCTIONS:\n\nPress i at any-moment to view these Instructions again!\n\nPress 1 to switch to Revolutions!\nPress 2 to switch to Propellers!\nPress 3 to switch to Piano again!\nPress X to Halt at any-moment!\nPress Space_Bar to Begin!\n\nHope you enjoy the show!", in.width / 2, in.height / 2);
     }   
     
 }
