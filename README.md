@@ -6,7 +6,7 @@ Student Number: c18743045
 
 # Description of the assignment
 
-# # This Project is a visualization of King Of Everything by Dominic Fike.
+This Project is a visualization of King Of Everything by Dominic Fike.
 There are 6 new java files/classes that were cretaed for this project.
 
 - Instrument class is the one, which calls for all the other class in its draw function.The screen size & where most of the setup is done, like the ability to switch from instrument (drawing) to another. 
@@ -85,6 +85,7 @@ The user is expected to switch the above mentioned using keyboard buttons. which
 
 # What I am most proud of in the assignment
 I am most pround of the PianoStrand the way the strings move the to music it feels natural & I have tested it on songs its works quite well which took very long to make but is the exaclty as intended which I can't say for all the others but every file was worked on to represent the song best as possible.
+
 
 # Video:
 [![YouTube](https://img.youtube.com/vi/8wL6Z_dgDIA/hqdefault.jpg)](https://youtu.be/8wL6Z_dgDIA)
